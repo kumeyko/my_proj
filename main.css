@@ -1,0 +1,687 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+/* Шрифты */
+@font-face {
+    font-family: 'fira_sansbook';
+    src: url('fonts/firasans-book.eot');
+    src: url('fonts/firasans-book.eot?#iefix') format('embedded-opentype'),
+         url('fonts/firasans-book.woff') format('woff'),
+         url('fonts/firasans-book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fira_sansmedium';
+    src: url('fonts/firasans-medium.eot');
+    src: url('fonts/firasans-medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/firasans-medium.woff') format('woff'),
+         url('fonts/firasans-medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'fira_sanslight';
+    src: url('fonts/firasans-light.eot');
+    src: url('fonts/firasans-light.eot?#iefix') format('embedded-opentype'),
+         url('fonts/firasans-light.woff') format('woff'),
+         url('fonts/firasans-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*основные стили*/
+
+body {
+	background: url(img/bg.png) repeat 50% 0;
+	background-color: #fff;
+	color: #4a545d;
+	font-family: fira_sansbook, sans;
+	min-width: 960px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+header {
+	background-color: #eff3f7;
+	height: 119px;
+	width: 100%;
+}
+
+li {
+	display: inline;
+	list-style: none;
+}
+
+i {
+	font-family: fira_sanslight, sans;
+	font-style: normal;
+	font-size: 15px;
+	line-height: 1;
+}
+
+.clear {
+	clear: both;
+}
+
+.gradient {
+	min-width: 960px;
+	background-image: -moz-linear-gradient(0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
+	background-image: -webkit-linear-gradient(0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
+	background-image: -ms-linear-gradient(0deg, rgb(28,102,122) 0%, rgb(246,250,254) 0%, rgb(216,216,216) 0%, rgb(242,246,250) 0%, rgb(135,174,186) 28%, rgb(28,102,122) 48%, rgb(135,174,186) 71%, rgb(242,246,250) 100%);
+	width: 100%;
+	height: 3px;
+}
+
+.content {
+	margin-top: 35px;
+}	
+
+.logo {
+	float: left;
+	padding: 30px 0 0 100px;
+}
+
+.socials {
+	float: right;
+	padding: 34px 82px 0 0;
+}
+
+.socials a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-right: 17px;
+	background-repeat: no-repeat;
+	background-image: url(img/socials-sprite.png);
+}
+
+.fc {
+	background-position: 0 0; width: 50px; height: 50px;
+}
+
+.fc:hover {
+ 	background-position: -55px 0; width: 50px; height: 50px;
+ } 
+
+.git { 
+	background-position: -110px 0; width: 50px; height: 50px; 
+} 
+.git:hover { 
+	background-position: -165px 0; width: 50px; height: 50px; 
+}
+
+.tw { 
+	background-position: -220px 0; width: 50px; height: 50px; 
+}
+
+.tw:hover { 
+	background-position: -275px 0; width: 50px; height: 50px; 
+}
+
+.vk { 
+	background-position: -330px 0; width: 50px; height: 50px; 
+} 
+.vk:hover { 
+	background-position: -385px 0; width: 50px; height: 50px; 
+} 
+
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.left-sidebar {
+	width: 250px;
+	float: left;
+	margin-right: 60px;
+}
+
+.top-sidebar { 
+	background: #eff3f7;
+	border-radius: 5px;
+	margin-bottom: 23px;
+}
+
+.top-sidebar a {
+	display: block;
+	padding: 21px 0 20px 28px;
+	font-size: 21px;
+	text-decoration: none;
+	color: #959aa8;
+}
+
+.top-sidebar .active {
+	background-color: #3ba8c8;
+	color: white;
+	font-size: 21px;
+	padding: 20px 0 15px 28px;
+}
+
+.top-sidebar .active:hover {
+	color:white;
+}
+
+.top-sidebar a:hover { 
+	color: #3ba8c0;
+}
+
+.top-sidebar .line-bottom {
+	background: url(img/smallline.png) no-repeat bottom;
+}
+
+.bottom-sidebar img{
+	padding: 0px 18px 0px 44px;
+	vertical-align: middle;
+}
+
+.bottom-sidebar .f-col {
+	background: #3ba8c0;
+	padding: 8px 0 0 19px;
+	margin: 0;
+	color: white;
+	font-size: 21px;
+}
+
+.bottom-sidebar a{
+	padding: 6px 0 6px 0px;
+	display: block;
+	color: white;
+	font-size: 17px;
+	text-decoration: none;
+}
+
+.bottom-sidebar a:hover{
+	text-decoration: underline;
+}
+
+.s-col{
+	background: #41b9d4;
+}
+
+.t-col{
+	background: #48cbe8;
+
+}
+
+.fo-col{
+	background: #51daf8;
+}
+
+.main-content, .my-works{
+	float: right;
+	width: 650px;
+	border-radius: 5px;
+}
+
+.main-content h2,
+.my-works h2 {
+	color: #3ba8c0;
+	float: left;
+	border-bottom: 2px solid;
+	font-weight: normal;
+	font-size: 27px;
+}
+
+.main-content h2 {
+	padding: 13px 23px 11px 21px;
+}
+
+.main-info {
+	position: relative;
+}
+
+.main-info,
+.work,
+.education {
+	background: #eff3f7;
+}
+
+.main-info p {
+	font-size: 15px;
+}
+
+.main-info:after {
+	content: ' ';
+	display: block;
+	clear: both;
+}
+
+.main-info .marked {
+	font-family: fira_sansmedium, sans;
+	font-size: 17px;
+	line-height: 2.2;
+	padding-right: 17px;
+}
+.main-content .key-skills {
+	display: inline !important;
+	float: left;
+	vertical-align: top;
+	margin: 0;
+}
+
+.skills {
+	display: inline;
+	float: left;
+	padding-top: 2px;
+	width: 210px;
+}
+
+.main-content .main-info .skills-bg {
+	background: -moz-linear-gradient(to bottom, #3ba8c0 0%,#3ba8c0 50%,#2e8ca2 51%,#2e8ca2 100%);
+	background: -o-linear-gradient(to bottom, #3ba8c0 0%,#3ba8c0 50%,#2e8ca2 51%,#2e8ca2 100%);
+	background: -webkit-linear-gradient(to bottom, #3ba8c0 0%,#3ba8c0 50%,#2e8ca2 51%,#2e8ca2 100%);
+	background: linear-gradient(to bottom, #3ba8c0 0%,#3ba8c0 50%,#2e8ca2 51%,#2e8ca2 100%);
+	color: white;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: inline;
+	float: left;
+	margin: 0 2px 7px 0;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.photo {
+	width: 240px;
+	height: 250px;
+	padding: 16px 1px 14px 20px;
+	float: left;
+	clear: both;
+}
+
+.info {
+	float: left;
+	padding-top: 23px;
+	line-height: 2.3;
+}
+
+.about {
+	clear:both;
+	padding-bottom: 10px;
+}
+
+.work h2,
+.education h2{
+	margin-bottom: 20px;
+}
+
+.work {	
+	margin: 24px 0 24px 0;
+}
+
+.work img, .education img {
+	display: inline-block;
+	padding: 5px 30px 21px 65px;
+	clear: both;
+	float: left;
+	vertical-align: top; 
+}
+
+ .education .kurs {
+	padding: 5px 40px 21px 71px;
+}
+
+.work p, .education p {
+	padding: 16px 0 16px 0;
+	margin: 0;
+	font-size: 17px;
+}
+
+.education {
+	margin-bottom:39px;
+}
+
+footer {
+	clear: both;
+	background-color: #eff3f7;
+	height: 81px;
+	text-align: center;
+}
+
+footer p {
+	padding: 31px 0 0 0;
+	font-family: fira_sanslight, sans;
+	font-style: normal;
+	font-size: 13px;
+}
+
+/* Вторая страница с работами*/
+
+.form, .my-works {
+	width: 650px;
+	float: left;
+	margin: 0 auto 39px;
+	background: #eff3f7;
+	border-radius: 5px;
+}
+
+.form {
+	display: block;
+}
+
+.form h1 {
+	background: #48cbe8;
+	border-bottom: 17px solid #67dffa;
+	color: #fff;	
+	font-size: 27px;
+	font-weight: normal;	
+	padding: 40px 0;
+	margin-bottom: 41px;
+	text-align: center;
+	text-indent: -6px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.form-area {
+	width: 401px;
+	margin: 0 auto;
+}
+
+.form-area p {
+	font-size: 19px;
+	color:#959aa8;
+	font-family: fira_sanslight, sans; 
+	margin: 0;
+}
+
+label {
+	display: block;
+	margin-bottom: -3px;
+	text-indent: -1px;
+}
+
+textarea {
+	width: 400px;
+	height: 182px;
+	resize: none;
+}
+
+input {
+	width: 190px;
+	height: 38px;
+}
+
+textarea, input {
+	box-sizing:border-box;
+	background: #fbfbfb;
+	border: 1px solid #48cbe8;
+	border-radius: 5px;
+	font-size: 13px;
+	color: #48cbe8;
+	outline: none;
+}
+
+textarea::-webkit-input-placeholder {
+	color: #48cbe8;
+  	padding: 8px;
+ 	font-size: 13px;
+}
+::-webkit-input-placeholder {
+   color: #48cbe8;
+   padding-left: 8px;
+   font-size: 13px;
+}
+
+:-ms-input-placeholder {  
+   color: #48cbe8;
+   padding-left: 8px;
+   font-size:13px;
+}
+
+.left-side {
+	float: left;
+	margin-bottom: 12px;
+}
+
+.right-side {
+	float: right;
+}
+
+.code {
+	width: 190px;
+	height: 78px;
+	vertical-align: middle;
+}
+
+.code-answer {
+	display: inline-block;
+	float: right;
+	height: 32px;
+}
+
+.bottom-form {
+	position: relative;
+	width: 400px;
+}
+
+.bottom-form .right-side {
+	position: absolute;
+	top: 332px;
+	right: -1px;
+}
+
+button {
+	width: 140px;
+	font-size: 19px;
+	color:#fff ;
+	font-family: fira_sansbook, sans;
+	border: none;
+	border-radius: 5px;
+	margin-top: 35px;
+	box-sizing: border-box;
+}
+
+.send {
+	background: #48cbe8;
+	margin-right: 115px;
+	margin-bottom: 226px;
+  	background-color: rgb(72, 203, 232);
+  	border-bottom: 3px solid #3ba8c0;
+}
+.send:hover {
+	border-bottom: none;
+}
+
+.send:active {
+	border-top: 3px solid #3ba8c0;
+}
+
+.clear-button {
+  	background-color: rgb(132, 157, 181);
+  	border-bottom: 3px solid #687b8f;
+}
+
+.clear-button:hover {
+	border-bottom: none;
+}
+
+.clear-button:active {
+	border-top: 3px solid #687b8f;
+}
+
+ 
+/*Мои работы*/
+
+.my-works {
+	width: 650px;
+	height: 838px;
+}
+.my-site {
+	overflow: hidden;
+	margin: 0 auto;
+	width: 610px;
+	padding-top: 34px;
+
+}
+.my-site a {
+	text-decoration: none;
+	color: #3ba8c0;
+	font-family: fira_sanslight, sans;
+	font-style: italic;
+	font-size: 13px;
+}
+
+.my-site ul li {
+	float: left;
+	font-size: 15px;
+	font-family: fira_sanslight, sans;
+	width: 179px;
+	margin-right: 35px;
+	text-align: center;
+	box-sizing: border-box;
+	padding-bottom: 44px;
+}
+
+
+.my-works h2 {
+	padding: 13px 23px 11px 25px;
+	display: inline-block;
+}
+
+.my-site ul li img {
+	border: 1px solid #68BCCF;
+	border-radius: 5px;
+	height: 125px;
+}
+
+.add-new {
+	background-color: #edf8fc;
+	border-radius: 5px;	
+	border: 1px dashed #68bbce;
+	width: 179px;
+	display: block;
+	color: #68bbce;
+	height: 127px;
+}
+
+.add-new a {
+	color: #68bbce;
+}
+
+.add-new #add-new {
+	margin: 35px 0 0 2px;
+	height: 32px;
+	width: 32px;
+}
+
+#reset-m {
+	margin:0;
+}
+
+/*модальное окно*/
+
+.modal {
+  width: 362px;
+  background: #eff3f7;
+  border-radius; 5px;
+  margin: 30px auto 223px;
+}
+.modal h1 {
+  background: #48cbe8;
+  border-bottom: 10px solid #67dffa;
+  color: white;
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0;
+  padding: 5px 0 0 12px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.modal h1 img {
+	float: right;
+	padding: 5px 15px 5px 0;
+	cursor: pointer;
+}
+
+.modal form {
+  width: 318px;
+  margin: 6px 0 0 20px;
+}
+
+.modal input {
+  width: 100%;
+  height: 37px; 
+}
+
+.modal label {
+	margin: 8px 0 6px 0;
+}
+
+.modal textarea {
+  width: 99%;
+  height: 104px;
+}
+
+.modal p {
+  font-size: 17px;
+  color: #959aa8;
+  font-family: fira_sanslight, sans;
+  font-weight: bold;
+}
+
+.project-images {
+	position: relative;
+}
+.upload {
+  width: 272px!important;
+  margin-right: 0!important;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+}
+
+.for-images a {
+  display: inline-block;
+  width: 46px;
+  height: 37px;
+  border: 1px solid #48cbe8;
+  vertical-align: top;
+  background-color: #48cbe8;
+  background-image: url(img/downloadico.png);	
+  background-position: -4px -3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: absolute;
+  box-sizing:border-box;
+}
+
+.for-images img {
+  padding: 7px 0 0 5px;
+}
+
+.modal .button {
+  width: 44%;
+  text-align: center;
+  margin: auto;
+  margin-top: -24px;
+  padding: 0 0 10px;
+}
+
+#submit {
+  background: #48cbe8;
+  border-radius: 5px;
+  border-bottom: 3px solid #3ba8c0;
+  color: white;
+}
+
+#submit:hover {
+	border:none;
+}
+
+#submit:active {
+	border-top:3px solid #3ba8c0;;
+}
+
